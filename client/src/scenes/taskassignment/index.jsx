@@ -35,7 +35,7 @@ const TaskAssignment = () => {
 
     try {
       const response = await fetch(
-        `http://localhost:5001/control/task/${task._id}/assign/${user.userID}`,
+        `http://13.38.114.121:5001/control/task/${task._id}/assign/${user.userID}`,
         {
           method: "PUT",
         }
