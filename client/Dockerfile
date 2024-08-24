@@ -1,16 +1,16 @@
-FROM node:current-alpine
+FROM node:alpine
 
 WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm install
+RUN npm ci
 
 COPY . .
 
-ENV NODE_OPTIONS="--max-old-space-size=4096"
+ENV NODE_OPTIONS="--max-old-space-size=2048"
 
-RUN npm run build
+RUN npm run build --verbose
 
 EXPOSE 3000
 
