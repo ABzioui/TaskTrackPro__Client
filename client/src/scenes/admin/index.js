@@ -40,7 +40,7 @@ const Admin = () => {
     formData.append("picturePath", formValues.picture.name);
 
     const savedUserResponse = await fetch(
-      "http://13.38.114.121:5001/auth/register",
+      "http://35.180.228.249:5001/auth/register",
       {
         method: "POST",
         body: formData,
@@ -66,7 +66,7 @@ const Admin = () => {
     console.log("Delete user with ID:", deleteUserId);
 
     const response = await fetch(
-      `http://13.38.114.121:5001/auth/deleteUser/${deleteUserId}`,
+      `http://35.180.228.249:5001/auth/deleteUser/${deleteUserId}`,
       {
         method: "DELETE",
       }
