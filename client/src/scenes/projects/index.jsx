@@ -53,7 +53,7 @@ const Projects = () => {
     console.log("formData :", formData);
 
     const savedProjectResponse = await fetch(
-      "http://35.180.228.249:5001/control/addProject",
+      "http://35.180.60.25:5001/control/addProject",
       {
         method: "POST",
         body: formData,
@@ -75,7 +75,7 @@ const Projects = () => {
   const handleDeleteSubmit = async () => {
     console.log("Delete Project ID:", deleteProjectID);
     const response = await fetch(
-      `http://35.180.228.249:5001/control/deleteProject/${deleteProjectID}`,
+      `http://35.180.60.25:5001/control/deleteProject/${deleteProjectID}`,
       {
         method: "DELETE",
       }
