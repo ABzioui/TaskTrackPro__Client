@@ -68,7 +68,7 @@ const Form = () => {
             const fileType = values.picture.type;
 
             // Upload image to S3
-            const uploadResponse = await fetch("http://35.180.60.25:5001/auth/upload", {
+            const uploadResponse = await fetch("http://15.237.58.88:5001/auth/upload", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ fileBuffer, fileName, fileType })
@@ -83,7 +83,7 @@ const Form = () => {
             console.log("picture : ", values.picture)
 
             // Register user
-            const savedUserResponse = await fetch("http://35.180.60.25:5001/auth/register", {
+            const savedUserResponse = await fetch("http://15.237.58.88:5001/auth/register", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(values),
@@ -110,7 +110,7 @@ const Form = () => {
 
 
   const login = async (values, onSubmitProps) => {
-    const loggedInResponse = await fetch("http://35.180.60.25:5001/auth/login", {
+    const loggedInResponse = await fetch("http://15.237.58.88:5001/auth/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(values),

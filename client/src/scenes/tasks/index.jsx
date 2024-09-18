@@ -48,7 +48,7 @@ const Tasks = () => {
       formData.append(value, formValues[value]);
     }
     const savedUserResponse = await fetch(
-      "http://35.180.60.25:5001/control/addTask",
+      "http://15.237.58.88:5001/control/addTask",
       {
         method: "POST",
         body: formData,
@@ -70,7 +70,7 @@ const Tasks = () => {
     console.log("Delete Task ID:", deleteTaskID);
 
     const response = await fetch(
-      `http://35.180.60.25:5001/control/deleteTask/${deleteTaskID}`,
+      `http://15.237.58.88:5001/control/deleteTask/${deleteTaskID}`,
       {
         method: "DELETE",
       }
